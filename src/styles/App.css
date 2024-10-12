@@ -1,0 +1,230 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #FF7043; /* Orange color */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #333;
+}
+
+/* Home Page Styles */
+.home-container {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home-container p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #FF7043;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #FF5722;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* QR Code Generator Styles */
+.qr-code-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-container input,
+.qr-code-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.qr-code-container button {
+    padding: 10px 20px;
+    background-color: #FF7043;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qr-code-container button:hover {
+    background-color: #FF5722;
+}
+
+.qr-code-display {
+    margin: 20px 0;
+}
+
+.history img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* About Page Styles */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1,
+.about-container h2 {
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.about-container ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.about-container ul li {
+    margin-bottom: 10px;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF7043;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: #FF5722;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+
+    .home-container h1 {
+        font-size: 2rem;
+    }
+
+    .qr-code-container {
+        width: 90%;
+    }
+
+    .about-container {
+        padding: 30px;
+    }
+}
