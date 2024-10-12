@@ -7,7 +7,6 @@ const QRCodeGenerator = () => {
     const [errorCorrectionLevel, setErrorCorrectionLevel] = useState('L');
     const [downloadFormat, setDownloadFormat] = useState('png');
     const [downloadLink, setDownloadLink] = useState('');
-    const [history, setHistory] = useState([]);
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
@@ -29,13 +28,6 @@ const QRCodeGenerator = () => {
         const canvas = document.getElementById('qrcode');
         const imageUrl = canvas.toDataURL(`image/${downloadFormat}`);
         setDownloadLink(imageUrl);
-
-        // Add the current QR code to history
-        const newHistoryItem = {
-            value: inputValue,
-            image: imageUrl,
-        };
-        setHistory([...history, newHistoryItem]);
     };
 
     return (
@@ -96,16 +88,6 @@ const QRCodeGenerator = () => {
                     <button type="button">Download Link</button>
                 </a>
             )}
-
-            <h2>History of QR Codes</h2>
-            <div className="history">
-                {history.map((item, index) => (
-                    <div key={index}>
-                        <img src={item.image} alt={`QR Code for ${item.value}`} />
-                        <p>{item.value}</p>
-                    </div>
-                ))}
-            </div>
         </div>
     );
 };
